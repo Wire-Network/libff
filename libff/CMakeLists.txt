@@ -63,8 +63,13 @@ target_include_directories(
   PUBLIC ..
 )
 
+if(FF_INSTALL_COMPONENT)
+   set(INSTALL_COMPONENT_ARGS COMPONENT ${FF_INSTALL_COMPONENT} EXCLUDE_FROM_ALL)
+endif()
+
 install(
   DIRECTORY "" DESTINATION "include/libff"
+  ${INSTALL_COMPONENT_ARGS}
   FILES_MATCHING
   PATTERN "*.hpp"
   PATTERN "*.tcc"
@@ -73,7 +78,7 @@ install(
 )
 
 install(
-  TARGETS ff DESTINATION lib
+  TARGETS ff DESTINATION lib ${INSTALL_COMPONENT_ARGS}
 )
 
 # Tests
