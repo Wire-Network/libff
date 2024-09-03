@@ -1,6 +1,6 @@
 [submodule "depends/ate-pairing"]
 	path = depends/ate-pairing
-	url = ../ate-pairing.git
+	url = ../ate-pairing
 [submodule "depends/xbyak"]
 	path = depends/xbyak
-	url = ../herumi/xbyak.git
+	url = ../xbyak
